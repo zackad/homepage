@@ -1,0 +1,24 @@
+language: node_js
+
+node_js:
+  - "6"
+
+script:
+  - npm run build:prod
+
+before_deploy:
+  - openssl aes-256-cbc -K $encrypted_e651d210d85a_key -iv $encrypted_e651d210d85a_iv
+    -in deploy_rsa.enc -out /tmp/deploy_rsa -d
+  - eval "$(ssh-agent -s)"
+  - chmod 600 /tmp/deploy_rsa
+  - ssh-add /tmp/deploy_rsa
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/dist $path
+  path:
+    secure: AOdDS5/Rd+6sFRJgt3WDQLE5JCJdNzGJta8DkmSC6K3Hi6T9z1OW1VWmh5MxVCrIaXICDtLTV6K4q/FoeDPbqaKLC3mZ6hdg15+vrb84s6Fssb6LopE//n8L7X0UuOmSiY9n48qLFSu1m7iQi4YszNhdcaynu7PkQE1ODJlrawLivAYT8KeKhLHO5Xbyo5r7ch5AxX2dYhQAb6BPFmBlY3ZbTk1EUCCVs9ktZQzmHdXRiotfoXKvaTdwgSoExlcAja6bqbYh5x+ne9WcjihJb5u3bDGSS95eI2OIRwuKba1Fg2vNCZZkUpvqpOti+3KjDninFpYK8vZ9JomoUN0M3WnjcBMVuNt+Qbde84GidgDR1fnLFhv8PAqLTgiREK1XDPd8CJchJcWlVGF3vNEG1liaWISk8BYHXJnrbuX3326tYU4efzHsLRevjInP4nqQiIkCNYf1ECPfpW192eucJnYA5ATC5+xg0beQJmnZNUcZagJnm6yXFAVQIjQBX6TGlM+TC6XiVrD6IgqQVIvR6+Q+h814v3EEr4EVdbzJqj+M42dGsU6fOmRLRxVSQ3OVhMSQmnUhpGKq1MIn0hlAXe0rb4Hrhc6EE1TZPs6IIiYjhnamXAfvciaG1+E4v0nmh4YUa5U192wE8uIEfz0ml3tb1fU9OsGiYdTNEqlWAIQ=
+  on:
+    branch: master
+
