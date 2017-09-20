@@ -3,6 +3,23 @@ language: node_js
 node_js:
   - "6"
 
+env:
+  global:
+    - secure: >
+        RJoRvNPtPNABfEfp4YBH4QmwXjnFZk47zolPEkAROqkpwD1H7xt32KhWjyByodHZAuI1a6i
+        Y9FoRGgCgskOdPRKyLgJ2fgKwaX3XNkRAGwrDMp7qaby07omDCGFS7Ph+U2T9SKny24tRzZ
+        Fzf7iJAYwWWDO52z0VM6fsFLLz1jkORzn9kqlx76INiZz592xi60T65ga/R60n1x82FZXWi
+        Vb4ecDh8FmxN8JnPTyfOPVllwWpLWQSTSiiGIQcArkHI/G9MrwJ1RE/3JkaYXBFrjet5LLO
+        ekQQUT26NDOK7PB1E8u3KDWE28Un7TM6lvORTB+2CY99il6mbrEtJ1/N+5LWIpvaO7o6ooe
+        +Q9Kek86A9X3f/EPZNjd93dzFwddsmOXUshvl9qASadeh2iilTypmGF47g0Ueek4ePYVFv8
+        cz4YbobXIdTmn0NC5I1rDsck/XqPaPWodoFTi+p7P6SW8ZN5QjFFWXkSxR9uEYszjGVJMFH
+        QzSqKZsoDH37p138o/pg45whGd9Ppjbc1DnZZ557mdZW2ob4yoYZxtWd/3+h78HgcdtmF3R
+        Py8qcAyxn0v5tPRu4ncUlCHGyVKQI7ZhTj7jej2ItQ0JFR5ScnxgwQQGObdVo/XDZu6uV0b
+        396nKTlJKRCK8Cbb8/Q3ZdFUQBssOmQU7zB16Eg7fMNM=
+
+addons:
+  ssh_known_hosts: zackad.com
+
 script:
   - npm run build:prod
 
@@ -16,9 +33,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/dist $path
-  path:
-    secure: AOdDS5/Rd+6sFRJgt3WDQLE5JCJdNzGJta8DkmSC6K3Hi6T9z1OW1VWmh5MxVCrIaXICDtLTV6K4q/FoeDPbqaKLC3mZ6hdg15+vrb84s6Fssb6LopE//n8L7X0UuOmSiY9n48qLFSu1m7iQi4YszNhdcaynu7PkQE1ODJlrawLivAYT8KeKhLHO5Xbyo5r7ch5AxX2dYhQAb6BPFmBlY3ZbTk1EUCCVs9ktZQzmHdXRiotfoXKvaTdwgSoExlcAja6bqbYh5x+ne9WcjihJb5u3bDGSS95eI2OIRwuKba1Fg2vNCZZkUpvqpOti+3KjDninFpYK8vZ9JomoUN0M3WnjcBMVuNt+Qbde84GidgDR1fnLFhv8PAqLTgiREK1XDPd8CJchJcWlVGF3vNEG1liaWISk8BYHXJnrbuX3326tYU4efzHsLRevjInP4nqQiIkCNYf1ECPfpW192eucJnYA5ATC5+xg0beQJmnZNUcZagJnm6yXFAVQIjQBX6TGlM+TC6XiVrD6IgqQVIvR6+Q+h814v3EEr4EVdbzJqj+M42dGsU6fOmRLRxVSQ3OVhMSQmnUhpGKq1MIn0hlAXe0rb4Hrhc6EE1TZPs6IIiYjhnamXAfvciaG1+E4v0nmh4YUa5U192wE8uIEfz0ml3tb1fU9OsGiYdTNEqlWAIQ=
+  script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/dist/ $target_path
   on:
     branch: master
-
