@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build src/index.html",
-    "start": "parcel src/index.html"
+    "prebuild": "npm run tailwind:build --scripts-prepend-node-path",
+    "prestart": "npm run tailwind:build --scripts-prepend-node-path",
+    "start": "parcel src/index.html",
+    "tailwind:build": "tailwind build src/css/tailwind.src.css -o src/css/tailwind.css -c tailwind.js"
   },
   "keywords": [],
   "author": "",
