@@ -13,7 +13,7 @@ indent_style = space
 indent_size = 4
 
 # Matches multiple files with brace expansion notation
-[*.{css,scss,sass,twig,html,yml}]
+[*.{css,scss,sass,twig,html,yml,js}]
 indent_size = 2
 
 # Tab indentation (no size specified)
