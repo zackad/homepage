@@ -9,7 +9,7 @@
     "prebuild": "npm run tailwind:build --scripts-prepend-node-path",
     "prestart": "npm run tailwind:build --scripts-prepend-node-path",
     "start": "parcel src/index.html",
-    "tailwind:build": "tailwind build src/css/tailwind.src.css -o src/css/tailwind.css -c tailwind.js"
+    "tailwind:build": "tailwind build src/css/tailwind.src.css -o src/css/tailwind.css"
   },
   "keywords": [],
   "author": "",
