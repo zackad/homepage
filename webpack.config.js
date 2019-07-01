@@ -1,4 +1,5 @@
 const Encore = require('@symfony/webpack-encore')
+const HtmlPlugin = require('html-webpack-plugin')
 
 Encore.addEntry('index', './src/index.js')
   .setOutputPath('dist')
@@ -8,5 +9,8 @@ Encore.addEntry('index', './src/index.js')
   .enableSourceMaps(!Encore.isProduction())
   .enableVersioning(Encore.isProduction())
   .enablePostCssLoader()
+  .addPlugin(new HtmlPlugin({
+    template: './src/index.html'
+  }))
 
 module.exports = Encore.getWebpackConfig()
