@@ -10,7 +10,15 @@ Encore.addEntry('index', './src/index.js')
   .enableVersioning(Encore.isProduction())
   .enablePostCssLoader()
   .addPlugin(new HtmlPlugin({
-    template: './src/index.html'
+    template: './src/index.html',
+    minify: {
+      collapseWhitespace: true,
+      removeComments: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true,
+      useShortDoctype: true
+    }
   }))
 
 module.exports = Encore.getWebpackConfig()
