@@ -1,38 +1,7 @@
 language: node_js
 
 node_js:
-  - "8"
-
-env:
-  global:
-    - secure: >
-        RJoRvNPtPNABfEfp4YBH4QmwXjnFZk47zolPEkAROqkpwD1H7xt32KhWjyByodHZAuI1a6i
-        Y9FoRGgCgskOdPRKyLgJ2fgKwaX3XNkRAGwrDMp7qaby07omDCGFS7Ph+U2T9SKny24tRzZ
-        Fzf7iJAYwWWDO52z0VM6fsFLLz1jkORzn9kqlx76INiZz592xi60T65ga/R60n1x82FZXWi
-        Vb4ecDh8FmxN8JnPTyfOPVllwWpLWQSTSiiGIQcArkHI/G9MrwJ1RE/3JkaYXBFrjet5LLO
-        ekQQUT26NDOK7PB1E8u3KDWE28Un7TM6lvORTB+2CY99il6mbrEtJ1/N+5LWIpvaO7o6ooe
-        +Q9Kek86A9X3f/EPZNjd93dzFwddsmOXUshvl9qASadeh2iilTypmGF47g0Ueek4ePYVFv8
-        cz4YbobXIdTmn0NC5I1rDsck/XqPaPWodoFTi+p7P6SW8ZN5QjFFWXkSxR9uEYszjGVJMFH
-        QzSqKZsoDH37p138o/pg45whGd9Ppjbc1DnZZ557mdZW2ob4yoYZxtWd/3+h78HgcdtmF3R
-        Py8qcAyxn0v5tPRu4ncUlCHGyVKQI7ZhTj7jej2ItQ0JFR5ScnxgwQQGObdVo/XDZu6uV0b
-        396nKTlJKRCK8Cbb8/Q3ZdFUQBssOmQU7zB16Eg7fMNM=
-
-addons:
-  ssh_known_hosts: zackad.com
+    - '8'
 
 script:
-  - yarn build
-
-before_deploy:
-  - openssl aes-256-cbc -K $encrypted_e651d210d85a_key -iv $encrypted_e651d210d85a_iv
-    -in deploy_rsa.enc -out /tmp/deploy_rsa -d
-  - eval "$(ssh-agent -s)"
-  - chmod 600 /tmp/deploy_rsa
-  - ssh-add /tmp/deploy_rsa
-
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/dist/ $target_path
-  on:
-    branch: master
+    - yarn build
