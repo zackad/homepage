@@ -5,3 +5,10 @@ node_js:
 
 script:
     - yarn build
+
+deploy:
+    provider: netlify
+    site: $SITE_ID
+    auth: $AUTH_TOKEN
+    dir: dist
+    prod: true
