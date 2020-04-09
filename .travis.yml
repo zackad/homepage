@@ -12,3 +12,4 @@ deploy:
     auth: $AUTH_TOKEN
     dir: dist
     prod: true
+    edge: true
