@@ -1,13 +1,6 @@
 const Index = () => (
   <>
     <html lang='en'>
-      <head>
-        <meta charset='UTF-8' />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no' />
-        <meta name='theme-color' content='#222' />
-        <title>zackad</title>
-      </head>
-
       <body className='bg-gray-900 text-gray-200 font-sans'>
         <div className='flex items-center h-screen text-center'>
           <div className='flex-grow'>
