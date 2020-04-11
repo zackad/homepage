@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production encore production",
-    "start": "encore dev-server"
+    "build": "next build && next export",
+    "start": "next"
   },
   "keywords": [],
   "author": "",
