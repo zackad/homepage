@@ -10,7 +10,7 @@ deploy:
     provider: netlify
     site: $SITE_ID
     auth: $AUTH_TOKEN
-    dir: dist
+    dir: out
     prod: true
     edge: true
     on:
