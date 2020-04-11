@@ -15,7 +15,7 @@ export const SocialNetworks = () => (
     <a className='mx-2 hover:text-gray-100' href='http://stackoverflow.com/users/6265296/zackad'>
       <i className='fab fa-stack-overflow fa-fw'></i>
     </a>
-    <a className='mx-2 hover:text-gray-100' href='https://blog.zackad.com'>
+    <a className='mx-2 hover:text-gray-100' href='https://blog.zackad.dev'>
       <i className='fas fa-link fa-fw'></i>
     </a>
     <a className='mx-2 hover:text-gray-100' href='https://www.youtube.com/channel/UCao_VdbgaSy2CnB0VdySOEQ'>
