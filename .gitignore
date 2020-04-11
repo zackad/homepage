@@ -1,6 +1,8 @@
 /.cache
 /.netlify
+/.next
 /dist
 /node_modules
+/out
 *.log
 Makefile
