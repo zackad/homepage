@@ -1,5 +1,6 @@
 /.cache
 /.netlify
+/.next
 /dist
 /node_modules
 *.log
