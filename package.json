@@ -1,16 +1,14 @@
 {
-  "name": "homepage",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
+  "name": "@zackad/homepage",
+  "version": "2.0.0",
+  "description": "Personal homepage source code.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "next build && next export",
     "start": "next"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "zackad",
+  "license": "MIT",
+  "private": true,
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.8.1",
     "@fullhuman/postcss-purgecss": "^1.2.0",
