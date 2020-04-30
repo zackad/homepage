@@ -4,7 +4,7 @@ import { SocialNetworks } from '../components/SocialNetworks'
 
 const Index = () => (
   <div className='bg-gray-900 text-gray-200 font-sans'>
-    <div className='flex items-center h-screen text-center'>
+    <div className='flex min-h-screen text-center'>
       <div className='flex-grow'>
         <Hero />
         <SocialNetworks />
