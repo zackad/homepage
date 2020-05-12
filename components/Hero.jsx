@@ -1,6 +1,8 @@
 export const Hero = () => (
-  <section>
-    <h2 className='text-6xl font-serif leading-none'>zackad</h2>
-    <h2 className='text-xl sm:text-2xl font-mono leading-loose'>Full stack web developer</h2>
+  <section className='mx-auto mt-12 p-2 max-w-md'>
+    <div className='p-3 border rounded-lg'>
+      <h2 className='text-6xl font-serif leading-none border-b'>zackad</h2>
+      <h2 className='text-lg sm:text-2xl text-gray-400 font-mono leading-loose'>Full stack web developer</h2>
+    </div>
   </section>
 )
