@@ -13,7 +13,6 @@ export const SocialNetworks = () => (
       <SocialIcon icon='fas fa-envelope' url='mailto:zackad.dev@gmail.com' />
       <SocialIcon icon='fab fa-twitter' url='https://twitter.com/zackaddev' />
       <SocialIcon icon='fab fa-github' url='https://github.com/zackad' />
-      <SocialIcon icon='fab fa-telegram-plane' url='https://t.me/zackad' />
       <SocialIcon icon='fas fa-link' url='https://blog.zackad.dev' />
       <SocialIcon icon='fab fa-youtube' url='https://www.youtube.com/channel/UCao_VdbgaSy2CnB0VdySOEQ' />
     </div>
