@@ -1,7 +1,7 @@
 import { Hero } from '../components/Hero'
 import { Skills } from '../components/Skills'
 import { SocialNetworks } from '../components/SocialNetworks'
-import { Portfolio } from '../components/Portfolio'
+import { Portfolio } from '../components/portofolio/Portfolio'
 
 const Index = () => (
   <div className='font-sans'>

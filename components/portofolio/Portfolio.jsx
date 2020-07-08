@@ -1,8 +1,8 @@
-import { Item } from './portofolio/Item'
-import bbpp from '../images/kemnaker.svg'
-import jericho from '../images/jericho.png'
-import progressive from '../images/progressive.png'
-import simtrans from '../images/simtrans.png'
+import { Item } from './Item'
+import bbpp from '../../images/kemnaker.svg'
+import jericho from '../../images/jericho.png'
+import progressive from '../../images/progressive.png'
+import simtrans from '../../images/simtrans.png'
 
 export const Portfolio = () => {
   const portfolios = [
