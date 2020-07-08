@@ -1,6 +1,6 @@
 function SocialIcon({ icon, url }) {
   return (
-    <a className='mx-2 hover:text-gray-100' href={url} target='_blank'>
+    <a className='mx-2' href={url} target='_blank'>
       <i className={`${icon} fa-fw`}></i>
     </a>
   )
@@ -9,7 +9,7 @@ function SocialIcon({ icon, url }) {
 export const SocialNetworks = () => (
   <section className='mt-5'>
     <h1 className='text-2xl font-serif tracking-widest underline'>Contact</h1>
-    <div className='flex justify-center flex-wrap text-4xl text-gray-600 px-5'>
+    <div className='flex justify-center flex-wrap text-4xl px-5'>
       <SocialIcon icon='fas fa-envelope' url='mailto:zackad.dev@gmail.com' />
       <SocialIcon icon='fab fa-twitter' url='https://twitter.com/zackaddev' />
       <SocialIcon icon='fab fa-github' url='https://github.com/zackad' />
