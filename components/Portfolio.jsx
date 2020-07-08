@@ -3,7 +3,7 @@ import jericho from '../images/jericho.png'
 import progressive from '../images/progressive.png'
 import simtrans from '../images/simtrans.png'
 
-const Tag = ({ tag }) => <span className='inline-block pr-2 text-sm text-gray-500'>#{tag}</span>
+const Tag = ({ tag }) => <span className='inline-block pr-2 text-sm'>#{tag}</span>
 
 const Item = ({ title, image, description, live, demo, tags, time }) => {
   return (
