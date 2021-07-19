@@ -1,6 +1,7 @@
 import bbpp from '../images/kemnaker.svg'
 import jericho from '../images/jericho.png'
 import progressive from '../images/progressive.png'
+import sarprasSma from '../images/sarpras-sma.png'
 import simtrans from '../images/simtrans.png'
 
 const Tag = ({ tag }) => <span className='inline-block pr-2 text-sm text-gray-500'>#{tag}</span>
@@ -41,6 +42,14 @@ const Item = ({ title, image, description, live, demo, tags, time }) => {
 
 export const Portfolio = () => {
   const portfolios = [
+    {
+      title: 'SiMaspras',
+      description: 'Sistem Manajemen Sarana Prasarana Direktorat SMA',
+      live: 'https://sarpras-sma.kemdikbud.go.id',
+      image: sarprasSma,
+      tags: ['fullstack', 'symfony'],
+      time: 'Jul 2020 - Present',
+    },
     {
       title: 'BBPP Homepage',
       description:
