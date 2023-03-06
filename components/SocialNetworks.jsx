@@ -1,3 +1,5 @@
+import React from 'react'
+
 function SocialIcon({ icon, url }) {
   return (
     <a className='mx-2 hover:text-gray-100' href={url} target='_blank'>

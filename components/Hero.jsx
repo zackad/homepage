@@ -1,3 +1,5 @@
+import React from 'react'
+
 export const Hero = () => (
   <section className='mx-auto mt-12 p-2 max-w-md'>
     <div className='p-3 border rounded-lg'>

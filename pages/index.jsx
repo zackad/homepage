@@ -1,3 +1,4 @@
+import React from 'react'
 import { Hero } from '../components/Hero'
 import { Skills } from '../components/Skills'
 import { SocialNetworks } from '../components/SocialNetworks'

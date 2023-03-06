@@ -1,3 +1,5 @@
+import React from 'react'
+
 export const Skills = () => (
   <section>
     <h2 className='text-2xl font-serif tracking-widest underline mt-5'>Skills</h2>

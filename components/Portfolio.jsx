@@ -1,3 +1,4 @@
+import React from 'react'
 import bbpp from '../images/kemnaker.svg'
 import jericho from '../images/jericho.png'
 import progressive from '../images/progressive.png'
