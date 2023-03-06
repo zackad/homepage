@@ -1,3 +1,5 @@
+import React from 'react'
+
 export const Supports = () => (
   <section>
     <h2 className='text-2xl font-serif tracking-widest mt-5'>Support Me</h2>
