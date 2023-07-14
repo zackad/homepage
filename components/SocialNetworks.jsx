@@ -13,7 +13,6 @@ export const SocialNetworks = () => (
     <h1 className='text-2xl font-serif tracking-widest underline'>Contact</h1>
     <div className='flex justify-center flex-wrap text-4xl text-gray-600 px-5'>
       <SocialIcon icon='fas fa-envelope' url='mailto:zackad.dev@gmail.com' />
-      <SocialIcon icon='fab fa-twitter' url='https://twitter.com/zackaddev' />
       <SocialIcon icon='fab fa-github' url='https://github.com/zackad' />
       <SocialIcon icon='fas fa-link' url='https://blog.zackad.dev' />
       <SocialIcon icon='fab fa-youtube' url='https://www.youtube.com/channel/UCao_VdbgaSy2CnB0VdySOEQ' />
